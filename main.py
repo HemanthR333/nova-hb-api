@@ -13,7 +13,7 @@ app.add_middleware(
 )
 
 # Load your model
-model = joblib.load("novo_hb_model.pkl")  # Your filename
+model = joblib.load("nova_mae_under1_model.pkl")  # Your filename
 
 @app.get("/health")
 def health():
@@ -27,3 +27,4 @@ def predict(data: dict):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+
